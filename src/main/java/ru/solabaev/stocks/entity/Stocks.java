@@ -1,11 +1,12 @@
 package ru.solabaev.stocks.entity;
 
 import javax.persistence.*;
+import java.io.Serializable;
 import java.util.Date;
 
 @Entity
 @Table(name = "stocks")
-public class Stocks {
+public class Stocks implements Serializable {
 
     public Stocks() {
     }
