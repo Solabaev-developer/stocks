@@ -29,8 +29,8 @@ public class Parcer {
     private Document document;
 
     @Autowired
-    public Parcer(DocumentCreator documentCreator) {
-        this.document = documentCreator;
+    public Parcer(Document document) {
+        this.document = document;
     }
 
     public Double getPriceUsdFromDoc() {

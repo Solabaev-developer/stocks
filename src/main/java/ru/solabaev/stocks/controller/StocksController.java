@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import ru.solabaev.stocks.entity.Currencies;
 import ru.solabaev.stocks.entity.Stocks;
-import ru.solabaev.stocks.parcer.DocumentCreator;
 import ru.solabaev.stocks.parcer.Parcer;
 
 import java.util.Date;

@@ -12,11 +12,11 @@
         <maven.compiler.release>11</maven.compiler.release>
     </properties>
     <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
             <groupId>org.springframework</groupId>
-            <artifactId>spring</artifactId>
-            <version>5.2.3.RELEASE</version>
-            <type>pom</type>
+            <artifactId>spring-core</artifactId>
+            <version>5.3.10</version>
         </dependency>
         <dependency>
             <groupId>org.hibernate</groupId>

@@ -5,17 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96266931-0af9-4e70-87aa-e02f23b44967" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/conf/Config.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/parcer/CreateDocument.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/parcer/DocumentCreator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/url.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_2_3_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_10.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_2_3_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_10.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/conf/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/conf/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/controller/CurrenciesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/controller/CurrenciesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/controller/StocksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/controller/StocksController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/parcer/CreateDocument.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/parcer/DocumentCreator.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/parcer/Parcer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/solabaev/stocks/parcer/Parcer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/url.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/url.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/stocks.iml" beforeDir="false" afterPath="$PROJECT_DIR$/stocks.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +127,7 @@
       <updated>1633498253401</updated>
       <workItem from="1633498254948" duration="60000" />
       <workItem from="1633498974100" duration="631000" />
-      <workItem from="1633499616274" duration="15996000" />
+      <workItem from="1633499616274" duration="18772000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1633500007161</created>
@@ -142,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1633510210253</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Add Spring">
+      <created>1633523240199</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1633523240199</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -151,6 +159,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2" />
     <MESSAGE value="HAve done with Hibernate" />
-    <option name="LAST_COMMIT_MESSAGE" value="HAve done with Hibernate" />
+    <MESSAGE value="Add Spring" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add Spring" />
   </component>
 </project>
