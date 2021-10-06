@@ -4,12 +4,15 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ru.solabaev.stocks.entity.Stocks;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
+@Component
 public class Parcer {
     private Long id;
 
@@ -23,31 +26,28 @@ public class Parcer {
 
     private Integer priceEur;
 
-    public Document getDocument(String url) {
-        Document document = null;
-        try {
-            document = Jsoup.connect(url).get();
-        } catch (IOException e) {
-            System.out.println("Страница не найдена");
-        }
-        return document;
+    private Document document;
+
+    @Autowired
+    public Parcer(DocumentCreator documentCreator) {
+        this.document = documentCreator;
     }
 
-    public Double getPriceUsdFromDoc(Document document) {
+    public Double getPriceUsdFromDoc() {
         return Double.parseDouble(document.getElementsByClass("price left").text());
     }
 
-    public String getNameFromDoc(Document document) {
+    public String getNameFromDoc() {
         return document.getElementsByClass("ttl left indent_top_10 indent_right_10").text();
     }
 
-    public Double getCurrencyUsd(Document document) {
+    public Double getCurrencyUsd() {
         Elements elements = document.getElementsByClass("price");
         String price = elements.get(0).text();
         return Double.parseDouble(price);
     }
 
-    public Double getCurrencyEur(Document document) {
+    public Double getCurrencyEur() {
         Elements elements = document.getElementsByClass("price");
         String price = elements.get(1).text();
         return Double.parseDouble(price);

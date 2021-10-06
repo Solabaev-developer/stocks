@@ -4,29 +4,39 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.jsoup.nodes.Document;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import ru.solabaev.stocks.entity.Currencies;
 import ru.solabaev.stocks.entity.Stocks;
+import ru.solabaev.stocks.parcer.DocumentCreator;
 import ru.solabaev.stocks.parcer.Parcer;
 
 import java.util.Date;
 
+@Component
 public class StocksController {
     private Integer id = 0;
     private Double priceUsd;
     private String name;
     private Double priceEur;
     private Double priceRub;
+    private Document document;
+    private Parcer parcer;
 
-    public StocksController() {
+    @Autowired
+    public StocksController(Document document, Parcer parcer) {
         this.id = id + 1;
+        this.document = document;
+        this.parcer = parcer;
     }
 
-    public void getPriceUsd(Document document) {
-        this.priceUsd = new Parcer().getPriceUsdFromDoc(document);
+
+    public void getPriceUsd() {
+        this.priceUsd = parcer.getPriceUsdFromDoc();
     }
 
-    public void getName(Document document) {
-        this.name = new Parcer().getNameFromDoc(document);
+    public void getName() {
+        this.name = parcer.getNameFromDoc();
     }
 
     public void getPriceEur(Session session) {
@@ -42,11 +52,11 @@ public class StocksController {
         this.priceRub = priceUsd * currencyUsd;
     }
 
-    public Stocks getCurrentStocks (Session session, Document document) {
-        getPriceUsd(document);
-        getName(document);
+    public Stocks getCurrentStocks (Session session) {
+        getPriceUsd();
+        getName();
         getPriceRub(session);
         getPriceEur(session);
-        return new Stocks(this.id, this.priceUsd, new Date(),this.name, this.priceRub,this.priceEur);
+         return new Stocks(this.id, this.priceUsd, new Date(),this.name, this.priceRub,this.priceEur);
     }
 }
